@@ -28,7 +28,7 @@ set listchars+=space:.   " Add show space
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'                                  " Color scheme
-Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Conquer of Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Conquer of Completion
 Plug 'preservim/nerdcommenter'                          " Commenter
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -49,6 +49,9 @@ let g:NERDSpaceDelims = 1
 " Airline theme
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+" Coc Extension
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pairs', 'coc-yaml']
+
 
 set background=dark                             " for the dark version
 
