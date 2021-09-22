@@ -1,0 +1,17 @@
+Host lamhi
+    HostName 192.168.0.125
+    User lamjys
+
+Host myhi
+    HostName 192.168.0.125
+    User myvncuser
+
+Host ocia
+    HostName 150.136.169.128 
+    User ubuntu
+    IdentityFile ~/.ssh/oci-ssh-key-2021-06-15.key
+
+Host ocib
+    HostName 132.145.215.195 
+    User ubuntu
+    IdentityFile ~/.ssh/oci-ssh-key-2021-08-15.key
