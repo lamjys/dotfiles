@@ -29,6 +29,7 @@ set listchars+=space:.   " Add show space
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'                                  " Color scheme
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Conquer of Completion
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'preservim/nerdcommenter'                          " Commenter
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
