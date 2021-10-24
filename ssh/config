@@ -10,7 +10,7 @@ Host lamha
     HostName 192.168.0.100
     User lamjys
 
-ost ocia
+Host ocia
     HostName 150.136.169.128 
     User ubuntu
     IdentityFile ~/.ssh/oci-ssh-key-2021-06-15.key
