@@ -10,6 +10,10 @@ Host lamha
     HostName 192.168.0.100
     User lamjys
 
+Host nanaha
+    HostName 192.168.0.100
+    User nana
+
 Host ocia
     HostName 150.136.169.128 
     User ubuntu
