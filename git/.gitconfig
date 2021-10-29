@@ -1,0 +1,12 @@
+[user]
+	name = Joseph Lam
+	email = lamjys@gmail.com
+[color]
+	ui = auto
+[credential]
+	helper = store
+[core]
+	editor = nvim
+	autocrlf = input
+[pull]
+	rebase = false
