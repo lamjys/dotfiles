@@ -6,3 +6,5 @@ alias dot='ls -ld .?*'
 alias gh='history|grep'
 # exa to show icons
 alias exa='exa --icons'
+# midnight commander exit to current directory
+alias mc='. /usr/share/mc/bin/mc-wrapper.sh'
