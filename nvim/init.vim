@@ -25,6 +25,8 @@ set fdm=indent      " Set fold method to indent
 set foldlevelstart=99
 set list                 " Show tabs
 set listchars+=space:.   " Add show space
+set undofile                           " Save undos after file closes
+set undodir=$HOME/.config/nvim/undo    " Where to save undo histories
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'                                  " Color scheme
