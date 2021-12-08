@@ -1,0 +1,16 @@
+---
+version: "2.1"
+services:
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud
+    container_name: nextcloud
+    environment:
+      - PUID=1001
+      - PGID=1002
+      - TZ=Asia/Hong_Kong
+    volumes:
+      - /home/nana/appdata/nextcloud/config:/config
+      - /home/nana/appdata/nextcloud/data:/data
+    ports:
+      - 8443:443
+    restart: unless-stopped
