@@ -80,6 +80,5 @@ call plug#end()
 " Miscellaneous
 "--------------------------------------------------------------------------
 
-colorscheme gruvbox
 set background=dark                             " for the dark version
 autocmd BufRead,BufNewFile *.vifm set filetype=vim
