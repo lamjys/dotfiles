@@ -1,3 +1,7 @@
+"--------------------------------------------------------------------------
+" General settings
+"--------------------------------------------------------------------------
+
 syntax enable
 filetype plugin indent on
 set nocompatible    " be improved
@@ -13,6 +17,7 @@ set cursorline      " Enable highlighting of the current line
 set hlsearch        " Enable highlighting of the search
 set incsearch       " show pattern as it was typed so far
 set ignorecase      " Case insensitive search
+set smartcase       " Case sensitive when cap exist in search
 set clipboard=unnamedplus
 set scrolloff=4     " Scroll start when cursor N lines before
 set autoindent      " Good auto indent
@@ -25,20 +30,14 @@ set fdm=indent      " Set fold method to indent
 set foldlevelstart=99
 set list                 " Show tabs
 set listchars+=space:.   " Add show space
+set signcolumn=yes:2     " Show column for sign
 set undofile                           " Save undos after file closes
 set undodir=$HOME/.config/nvim/undo    " Where to save undo histories
+set splitright
 
-call plug#begin('~/.config/nvim/plugged')
-Plug 'morhetz/gruvbox'                                  " Color scheme
-Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Conquer of Completion
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'preservim/nerdcommenter'                          " Commenter
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-call plug#end()
-
-colorscheme gruvbox
-
+"--------------------------------------------------------------------------
+" Key maps 
+"--------------------------------------------------------------------------
 
 " Alt+<key> to move up / down line
 nnoremap <A-j> :m .+1<CR>==
@@ -46,18 +45,41 @@ nnoremap <A-k> :m .-2<CR>==
 inoremap jk <esc>
 inoremap kj <esc>
 
+"--------------------------------------------------------------------------
+" Plugins
+"--------------------------------------------------------------------------
+
+call plug#begin('~/.config/nvim/plugged')
+source ~/.config/nvim/plugins/gruvbox.vim               " Color scheme
+source ~/.config/nvim/plugins/coc.vim                   " Conquer of completion
+source ~/.config/nvim/plugins/semshi.vim                " Semantic Python highlight
+source ~/.config/nvim/plugins/nerdcommenter.vim         " Nerd commenter
+source ~/.config/nvim/plugins/airline.vim               " Airline
+" Plug 'morhetz/gruvbox'                                  " Color scheme
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Conquer of Completion
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Plug 'preservim/nerdcommenter'                          " Commenter
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+
+
 
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+" let g:NERDSpaceDelims = 1
 " Airline theme
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
 " Coc Extension
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pairs', 'coc-yaml', 
-    \ 'coc-vimlsp', 'coc-tsserver', 'coc-sh', 'coc-css', 'coc-html', 
-    \ 'coc-docker', 'coc-explorer', 'coc-phpls', 'coc-python']
+" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pairs', 'coc-yaml', 
+"    \ 'coc-vimlsp', 'coc-tsserver', 'coc-sh', 'coc-css', 'coc-html', 
+"    \ 'coc-docker', 'coc-explorer', 'coc-phpls', 'coc-python']
 
+"--------------------------------------------------------------------------
+" Miscellaneous
+"--------------------------------------------------------------------------
 
+colorscheme gruvbox
 set background=dark                             " for the dark version
-
 autocmd BufRead,BufNewFile *.vifm set filetype=vim
