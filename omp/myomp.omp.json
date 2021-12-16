@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#7E46B6",
+          "properties": {
+            "prefix": "",
+            "template": "{{ .UserName }}"
+          }
+        },
+        {
+          "type": "os",
+          "style": "powerline",
+          "foreground": "#DD4814",
+          "properties": {
+            "prefix": "",
+            "postfix": " "
+          }
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#4169E1",
+          "properties": {
+            "prefix": "",
+            "template": "{{ .ComputerName }}"
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#87FF00",
+          "properties": {
+            "style": "full",
+            "prefix": ""
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#5FD7FF",
+          "properties": {
+            "template": "{{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }}<#87FF00> ● {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#D75F00> ● {{ .Working.String }}</>{{ end }}",
+            "fetch_status": true,
+            "display_status": true,
+            "display_stash_count": true,
+            "display_upstream_icon": true
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "properties": {
+            "text": "\uF9B7",
+            "prefix": ""
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": false
+}
