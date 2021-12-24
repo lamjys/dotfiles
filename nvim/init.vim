@@ -56,6 +56,7 @@ source ~/.config/nvim/plugins/semshi.vim                " Semantic Python highli
 source ~/.config/nvim/plugins/nerdcommenter.vim         " Nerd commenter
 source ~/.config/nvim/plugins/airline.vim               " Airline
 source ~/.config/nvim/plugins/vim-kitty.vim             " vim-kitty syntax highlight
+source ~/.config/nvim/plugins/startify.vim             " vim-kitty syntax highlight
 " Plug 'morhetz/gruvbox'                                  " Color scheme
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Conquer of Completion
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
