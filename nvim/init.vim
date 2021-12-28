@@ -65,22 +65,13 @@ source ~/.config/nvim/plugins/startify.vim             " vim-kitty syntax highli
 " Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-
-
-
-" Add spaces after comment delimiters by default
-" let g:NERDSpaceDelims = 1
-" Airline theme
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" Coc Extension
-" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pairs', 'coc-yaml', 
-"    \ 'coc-vimlsp', 'coc-tsserver', 'coc-sh', 'coc-css', 'coc-html', 
-"    \ 'coc-docker', 'coc-explorer', 'coc-phpls', 'coc-python']
-
 "--------------------------------------------------------------------------
 " Miscellaneous
 "--------------------------------------------------------------------------
 
+" netrw settings
+let g:netrw_preview = 1                         " Split open right
+let g:netrw_liststyle = 3                       " Show tree listing
+" other settings
 set background=dark                             " for the dark version
 autocmd BufRead,BufNewFile *.vifm set filetype=vim
