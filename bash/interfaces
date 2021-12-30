@@ -1,0 +1,12 @@
+# stored in home directory @hiyama for bridge0 interfaces
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+auto bridge0
+iface bridge0 inet static 
+  address 192.168.0.125
+  netmask 255.255.255.0
+  gateway 192.168.0.1
+  bridge_ports eth0
+  bridge_stp off
+  post-up ip link set bridge0 address b0:41:6f:03:a2:6b
