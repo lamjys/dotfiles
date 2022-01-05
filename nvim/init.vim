@@ -5,8 +5,8 @@
 syntax enable
 filetype plugin indent on
 set nocompatible    " be improved
-set encoding=UTF-8  " Set encoding
 set hidden          " Navigate to another buffer w/o saving current
+set encoding=UTF-8  " Set encoding
 set termguicolors   " Enable 24-bit color in TUI
 set ruler           " Show the cursor position all the time
 set nowrap          " Display long lines as just one line
@@ -56,7 +56,9 @@ source ~/.config/nvim/plugins/semshi.vim                " Semantic Python highli
 source ~/.config/nvim/plugins/nerdcommenter.vim         " Nerd commenter
 source ~/.config/nvim/plugins/airline.vim               " Airline
 source ~/.config/nvim/plugins/vim-kitty.vim             " vim-kitty syntax highlight
-source ~/.config/nvim/plugins/startify.vim             " vim-kitty syntax highlight
+source ~/.config/nvim/plugins/startify.vim              " Startup screen
+source ~/.config/nvim/plugins/vim-unimpaired.vim        " Pairs mapping, exchange line(s)
+source ~/.config/nvim/plugins/suda.vim                  " :SudaRead or :SudaWrite files with sudo command
 " Plug 'morhetz/gruvbox'                                  " Color scheme
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Conquer of Completion
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
