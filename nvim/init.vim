@@ -77,3 +77,4 @@ let g:netrw_liststyle = 3                       " Show tree listing
 " other settings
 set background=dark                             " for the dark version
 autocmd BufRead,BufNewFile *.vifm set filetype=vim
+autocmd TermOpen * setlocal nonumber norelativenumber scl=no 
