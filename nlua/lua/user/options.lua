@@ -30,7 +30,7 @@ set.relativenumber = true             -- Show relative number
 set.cursorline = true                 -- Enable highlighting of current line
 
 set.list = true                       -- Enable list chars
-set.listchars:append("space:.")       -- Add.show.space
+set.listchars:append("space:.", "eol:↴") -- Append.listchars: space, eol
 
 set.undofile = true                   -- Enable undo file
 set.completeopt = "menuone,noselect"  -- mostly just for cmp

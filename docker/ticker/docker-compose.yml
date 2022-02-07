@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+    ticker:
+        image: achannarasappa/ticker
+        volumes:
+            - '~/appdata/ticker/.ticker.yaml:/.ticker.yaml'
