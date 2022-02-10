@@ -11,5 +11,5 @@ alias mc='. /usr/share/mc/bin/mc-wrapper.sh'
 # ticker.sh script to use symlink ticker.conf output as arg
 alias t.sh='ticker.sh $(cat ~/.config/ticker.sh/ticker.conf)'
 # croc transfer file/dir
-alias crsnd='croc --relay croc.hiayam.fans --pass transfer send --code hiyama'
-alias crrec='croc --relay croc.hiayam.fans --pass transfer hiyama'
+alias crsnd='croc --relay croc.hiyama.fans --pass transfer send --code hiyama'
+alias crrec='croc --relay croc.hiyama.fans --pass transfer hiyama'
