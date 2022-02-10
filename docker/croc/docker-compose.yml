@@ -1,0 +1,10 @@
+version: "3"
+services:
+  croc:
+    container_name: croc
+    image: schollz/croc:sha-353ae0d
+    ports:
+      - 9009-9013:9009-9013
+    restart: unless-stopped
+    environment:
+      CROC_PASS: 'transfer'

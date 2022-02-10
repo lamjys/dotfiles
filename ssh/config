@@ -23,3 +23,8 @@ Host ocib
     HostName 132.145.215.195 
     User ubuntu
     IdentityFile ~/.ssh/oci-ssh-key-2021-08-15.key
+
+Host awsub
+    HostName ec2-3-85-29-215.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/MyAWSKeyPair.pem
