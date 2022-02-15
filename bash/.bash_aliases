@@ -13,3 +13,5 @@ alias t.sh='ticker.sh $(cat ~/.config/ticker.sh/ticker.conf)'
 # croc transfer file/dir
 alias crsnd='croc --relay croc.hiyama.fans --pass transfer send --code hiyama'
 alias crrec='croc --relay croc.hiyama.fans --pass transfer hiyama'
+# visidata
+alias vd='visidata'
