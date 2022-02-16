@@ -15,3 +15,5 @@ alias crsnd='croc --relay croc.hiyama.fans --pass transfer send --code hiyama'
 alias crrec='croc --relay croc.hiyama.fans --pass transfer hiyama'
 # visidata
 alias vd='visidata'
+# lazygit
+alias lg='lazygit'
