@@ -1,0 +1,22 @@
+colors:
+  body: none
+  date: CYAN
+  tags: YELLOW
+  title: none
+default_hour: 9
+default_minute: 0
+editor: 'nvim'
+encrypt: false
+highlight: true
+indent_character: '|'
+journals:
+  default: /home/nana/.local/share/jrnl/journal.txt
+  food:
+    journal: /home/nana/.local/share/jrnl/food.txt
+    editor: code -rw
+    display_format: markdown
+linewrap: 79
+tagsymbols: '#@'
+template: false
+timeformat: '%Y-%m-%d %H:%M'
+version: v2.8.4
