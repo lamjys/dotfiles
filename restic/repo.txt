@@ -1,0 +1,1 @@
+sftp:ocib:/home/ubuntu/restic-repo
