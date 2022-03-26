@@ -1,3 +1,7 @@
 # reloaded at start up and then continuously after a certain time
 auto-reload yes
 include /usr/share/doc/newsboat/contrib/colorschemes/nord
+urls-source "freshrss"
+freshrss-url "https://frss.hiyama.fans/api/greader.php"
+freshrss-login "lamjys" 
+freshrss-passwordfile "~/.config/newsboat/freshrss-passwordfile.txt"
