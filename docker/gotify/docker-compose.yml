@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  gotify:
+    image: gotify/server-arm64
+    container_name: gotify
+    ports:
+      - 8084:80
+    environment:
+      - 'GOTIFY_DEFAULTUSER_NAME=admin'
+      - 'GOTIFY_DEFAULTUSER_PASS=admin'
+      - 'TZ=Asia/Hong_Kong'
+    volumes:
+      - '~/appdata/gotify/data:/app/data'
+    restart: unless-stopped
