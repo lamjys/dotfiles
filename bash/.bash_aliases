@@ -17,3 +17,5 @@ alias crrec='croc --relay croc.hiyama.fans --pass transfer hiyama'
 alias vd='visidata'
 # lazygit
 alias lg='lazygit'
+# zellij alias to ze
+alias ze='zellij'

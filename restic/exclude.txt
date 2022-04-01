@@ -1,0 +1,10 @@
+# exclude files and sub-directories
+appdata/paperless-ngx
+appdata/pihole
+appdata/nextcloud
+appdata/samba
+appdata/**/cache
+appdata/**/.cache
+appdata/**/Cache
+appdata/**/Caches
+

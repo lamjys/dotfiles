@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1001
+      - PGID=1002
+      - VERSION=docker
+      - PLEX_CLAIM=claim-gPBpBC9drjs1y_g5KmXz
+    volumes:
+      - /home/nana/appdata/plex/config:/config
+      - /home/nana/mount/nastv:/tv
+      - /home/nana/mount/nasmedia:/movies
+      - /home/nana/mount/nasmusic:/music
+    restart: unless-stopped

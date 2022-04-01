@@ -1,0 +1,17 @@
+---
+version: "2.1"
+services:
+  rdesktop:
+    image: lscr.io/linuxserver/rdesktop:kde-focal
+    container_name: rdesktop
+    privileged: true #optional
+    environment:
+      - PUID=1001
+      - PGID=1002
+      - TZ=Asia/Hong_Kong
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+      - ~/appdata/rdesktop/data:/config #optional
+    ports:
+      - 8389:3389
+    restart: unless-stopped
