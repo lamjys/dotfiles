@@ -61,6 +61,14 @@
             "text": "\uF9B7",
             "prefix": ""
           }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": " \uE235 {{ .Full }} "
         }
       ]
     }
