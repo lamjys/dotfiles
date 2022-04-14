@@ -28,3 +28,7 @@ Host awsub
     HostName ec2-3-85-29-215.compute-1.amazonaws.com
     User ubuntu
     IdentityFile ~/.ssh/MyAWSKeyPair.pem
+
+Host hass
+    HostName 192.168.0.210
+    User root
