@@ -1,0 +1,2 @@
+# To custom docker ps format
+docker ps --format='table {{.Names}}\t{{.Ports}}'

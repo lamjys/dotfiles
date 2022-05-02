@@ -1,0 +1,5 @@
+# To extract SACD
+sacd_extract -2 -s -C -i filename.iso
+
+# dff to dsf
+for  file  in  *.dff;  do dff2dsf "$file"  "${file%.*}.dsf";  done
