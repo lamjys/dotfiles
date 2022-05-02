@@ -1,3 +1,12 @@
+# powershell script extension is *.ps1
+# need to Set-ExecutionPolicy RemoteSigned, default is Restricted
+# run script on command line by add & symbol
+# e.g. & C:\User\users\myapp\dotfiles\ps1\desktoplight.ps1
+# create shortcut icon:
+# target is: powershell.exe -noexit -ExecutionPolicy Bypass -File C:\User\users\myapp\dotfiles\ps1\desktoplight.ps1
+# remove -noexit for powershell window to exit after run
+# set run minimize for the shortcut icon
+
 $param = @{
     Uri           = "http://192.168.0.210:8123/api/services/switch/toggle"
     Method        = "Post"
