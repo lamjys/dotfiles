@@ -13,4 +13,6 @@
 #                                                                               #
 #################################################################################
 
-curl -d "tx test $TR_TORRENT_NAME" https://ntfy.hiyama.cloud/test
+NTFY_HOST=https://ntfy.hiyama.cloud
+NTFY_CHANNEL=test
+curl -d "D/L Completed: $TR_TORRENT_NAME" $NTFY_HOST/$NTFY_CHANNEL
