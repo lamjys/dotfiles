@@ -3,6 +3,15 @@ appdata/paperless-ngx
 appdata/pihole
 appdata/nextcloud
 appdata/samba
+appdata/plex
+appdata/rdesktop
+appdata/mypy/myapplication/lib
+appdata/nsxiv
+appdata/remix
+appdata/temp
+appdata/trilium-data
+appdata/zulip
+appdata/zulip-terminal
 appdata/**/cache
 appdata/**/.cache
 appdata/**/Cache
