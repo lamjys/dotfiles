@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: ./server
+    volumes:
+      - ./logs:/home/node/app/logs
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db/pckd
+      - DATABASE_TYPE=postgres
+      - JWT_SECRET=verysecurestring
+      - IPREGISTRY_API_KEY=v0l15l5cc4ue9mii
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./client
+    ports:
+      - 4080:80
+    environment:
+      - BACKEND_URL=http://server:4000
+    restart: unless-stopped
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=pckd
+    restart: unless-stopped
