@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+# https://superuser.com/a/1663171/458747
+use strict;
+eval 'sub TIOCSTI () {0x5412;}' unless defined(&TIOCSTI);
+system('stty -F /dev/tty -echo');
+my $str;
+if($#ARGV<0){ $str = join("",<STDIN>); } # read stdin if no args
+else{ $str = join(" ",@ARGV); }
+foreach my $ch (split('',$str)){
+  ioctl(STDOUT, &TIOCSTI, $ch) or die $!;
+}
+system('stty -F /dev/tty echo');
