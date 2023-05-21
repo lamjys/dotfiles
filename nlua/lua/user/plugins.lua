@@ -30,8 +30,9 @@ return packer.startup(function()
     use 'hoob3rt/lualine.nvim'                -- Status line
     use 'mhinz/vim-startify'                  -- Startify greeter
     use 'lukas-reineke/indent-blankline.nvim' -- Indent blank line
-    use "Bryley/neoai.nvim"
-    use "MunifTanjim/nui.nvim"
+    use 'Bryley/neoai.nvim'                   -- Neo AI
+    use 'Decodetalkers/csv-tools.lua'
+    use 'MunifTanjim/nui.nvim'
     use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
