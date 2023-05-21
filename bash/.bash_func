@@ -25,3 +25,11 @@ ex()
         echo "'$1' is not a valid file"
     fi
 }
+_readline_from_csv() {
+    local BUFFER
+    if BUFFER=$(<~/appdata/mdnotes/commands.csv fzf --delimiter=, --with-nth=2 --reverse | awk -F, '{print $3}'); then
+        READLINE_LINE=${BUFFER}
+        READLINE_POINT=${#READLINE_LINE}
+    fi
+}
+bind -x '"\C-x\C-r": _readline_from_csv'
