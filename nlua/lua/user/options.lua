@@ -35,3 +35,6 @@ set.listchars:append("space:.", "eol:↴") -- Append.listchars: space, eol
 set.undofile = true                   -- Enable undo file
 set.completeopt = "menuone,noselect"  -- mostly just for cmp
 
+-- vim global variables for bullets.vim
+-- vim.g.bullets_enable_in_empty_buffers = 0          -- default is '1' enable bullets
+vim.g.bullets_enabled_file_types = {"markdown"}       -- list of file types enabled
