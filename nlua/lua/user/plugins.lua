@@ -31,7 +31,8 @@ return packer.startup(function()
     use 'mhinz/vim-startify'                  -- Startify greeter
     use 'lukas-reineke/indent-blankline.nvim' -- Indent blank line
     use 'Bryley/neoai.nvim'                   -- Neo AI
-    use 'Decodetalkers/csv-tools.lua'
+    use 'Decodetalkers/csv-tools.lua'         -- CSV highlight
+    use 'dkarter/bullets.vim'
     use 'MunifTanjim/nui.nvim'
     use {
             'nvim-treesitter/nvim-treesitter',
