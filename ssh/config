@@ -37,3 +37,7 @@ Host awsub
 Host hass
     HostName 192.168.0.210
     User root
+
+Host hetzner
+    HostName mail.hiyama.cloud
+    User root
