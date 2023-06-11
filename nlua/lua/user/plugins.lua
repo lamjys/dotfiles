@@ -35,6 +35,10 @@ return packer.startup(function()
     use 'dkarter/bullets.vim'
     use 'MunifTanjim/nui.nvim'
     use {
+            'tpope/vim-fugitive', 
+            event = 'User InGitRepo'
+        }
+    use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
         }
