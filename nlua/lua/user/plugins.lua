@@ -34,10 +34,7 @@ return packer.startup(function()
     use 'Decodetalkers/csv-tools.lua'         -- CSV highlight
     use 'dkarter/bullets.vim'
     use 'MunifTanjim/nui.nvim'
-    use {
-            'tpope/vim-fugitive', 
-            event = 'User InGitRepo'
-        }
+    use 'tpope/vim-fugitive'                  -- fugitive git function in vim
     use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
