@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  dpaste:
+    container_name: dpaste
+    image: darrenofficial/dpaste:latest
+    ports:
+      - "8999:8000"
+    restart: unless-stopped
