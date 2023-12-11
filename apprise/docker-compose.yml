@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  apprise-api:
+    image: lscr.io/linuxserver/apprise-api:latest
+    container_name: apprise-api
+    environment:
+      - PUID=1001
+      - PGID=1002
+      - TZ=Asia/Hong_Kong
+    volumes:
+      - ${PWD}/config:/config
+    ports:
+      - 8000:8000
+    restart: unless-stopped
