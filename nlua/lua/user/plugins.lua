@@ -25,7 +25,7 @@ return packer.startup(function()
     use 'EdenEast/nightfox.nvim'              -- Colorscheme in LUA
     use 'windwp/nvim-autopairs'               -- Pair brackets
     use 'tpope/vim-unimpaired'                -- keymap for exchange line [e, ]e
-    use 'lambdalisue/suda.vim'                -- :SudaRead or :SudaWrite to file    
+    use 'lambdalisue/suda.vim'                -- :SudaRead or :SudaWrite to file
     use 'matbme/JABS.nvim'                    -- Buffer switcher in interactive way
     use 'hoob3rt/lualine.nvim'                -- Status line
     use 'mhinz/vim-startify'                  -- Startify greeter
