@@ -10,6 +10,8 @@ services:
       ND_SCANSCHEDULE: 1h
       ND_LOGLEVEL: info
       ND_SCANNER_EXTRACTOR: ffmpeg
+      ND_SPOTIFY_ID: 9f6e8fb77bff412289612551eb8af774
+      ND_SPOTIFY_SECRET: 480a808b2a724b119d07625f52a5c9e7
     volumes:
       - "./data:/data"
       - "/var/lib/mpd/music/nasmusic:/music:ro"

@@ -10,7 +10,7 @@ services:
       - TZ=Asia/Hong_Kong
     volumes:
       - /home/nana/appdata/nextcloud/config:/config
-      - /home/nana/appdata/nextcloud/data:/data
+      - /media/nana/USB-Volume/dv/nextcloud/data:/data
     ports:
       - 8443:443
     restart: unless-stopped

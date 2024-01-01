@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  send:
+    image: registry.gitlab.com/timvisee/send:latest
+    restart: always
+    ports:
+      - '1234:1234'
+    volumes:
+      - /home/nana/appdata/send/uploads:/uploads
+    environment:
+      - BASE_URL=https://send.hiyama.fans
+      - PORT=1234
+      - REDIS_HOST=redis
+      # For local uploads storage
+      - FILE_DIR=/uploads
+  redis:
+    image: 'redis:alpine'
+    restart: always
+    volumes:
+      - send-redis:/data
+volumes:
+  send-redis:

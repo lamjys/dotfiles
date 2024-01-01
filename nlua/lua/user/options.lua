@@ -1,7 +1,7 @@
 local set = vim.opt
 
 set.hidden = true                     -- Navigate to another buffer w/o saving current
-set.clipboard = "unnamedplus"
+set.clipboard:append("unnamedplus", "unnamed")
 set.conceallevel = 0                  -- Markdown file need this
 set.fileencoding = "utf-8"            -- Set encoding
 set.mouse = "a"                       -- Enable mouse

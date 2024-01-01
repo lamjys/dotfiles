@@ -4,7 +4,7 @@ let g:startify_custom_header =
     \ 'startify#pad(startify#fortune#boxed())'
 
 " custom number of most recent use files
-let g:startify_files_number = 5
+let g:startify_files_number = 4
 
 " hard code bookmarks of files or dir
 let g:startify_bookmarks = [
