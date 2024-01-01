@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  shlink:
+    image: shlinkio/shlink:stable
+    container_name: shlink
+    ports:
+      - "8787:8080"
+    environment:
+      - 'DEFAULT_DOMAIN=slnk.hiyama.fans'
+      - 'IS_HTTPS_ENABLED=true'
+      - 'GEOLITE_LICENSE=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'
+    restart: unless-stopped
