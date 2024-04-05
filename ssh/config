@@ -41,3 +41,7 @@ Host hass
 Host hetzner
     HostName mail.hiyama.cloud
     User root
+
+Host tencent
+    HostName 43.133.45.115
+    User lighthouse
