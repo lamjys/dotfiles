@@ -5,22 +5,22 @@ colors:
   title: none
 default_hour: 9
 default_minute: 0
-editor: 'nvim'
+editor: nvim
 encrypt: false
 highlight: true
 indent_character: '|'
 journals:
   default: /home/nana/.local/share/jrnl/journal.txt
   food:
+    display_format: markdown
+    editor: code -rw
     journal: /home/nana/.local/share/jrnl/food.txt
-    editor: code -rw
-    display_format: markdown
   movie:
-    journal: /home/nana/.local/share/jrnl/movie.txt
-    editor: code -rw
     display_format: markdown
+    editor: code -rw
+    journal: /home/nana/.local/share/jrnl/movie.txt
 linewrap: 79
 tagsymbols: '#@'
 template: false
 timeformat: '%Y-%m-%d %H:%M'
-version: v2.8.4
+version: v4.1
