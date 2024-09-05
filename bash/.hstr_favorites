@@ -1,9 +1,9 @@
+fc-cache -fv
+sacd_extract -2 -s -C -i file.iso
 curl -k -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhYTViZTJiZjcyODY0ZmVkYTNkNDU5MjRmMDhkNjk2MyIsImlhdCI6MTY0NDI0MDYwMywiZXhwIjoxOTU5NjAwNjAzfQ.Ggn4RkJM0egCvsXPeNQKKbQGYOYeZJp8NmiwUpXWSIc" -H "Content-Type: application/json" -d '{"entity_id": "switch.tasmota01"}' http://192.168.0.210:8123/api/services/switch/toggle
 sudo mount -t cifs -o user=admin,uid=$(id -u),gid=$(id -g) '//192.168.0.196/Music' /var/lib/mpd/music/nasmusic/
-sacd_extract -2 -s -C -i file.iso
 sudo openvpn /etc/openvpn/surfshark-ovpn/us-nyc.prod.surfshark.com_tcp.ovpn #ovpnnyc
 mosquitto_pub -h 192.168.0.210 -u lamjys -P $(cat ~/.config/mqtt) -t sonoff01/cmnd/POWER -m "toggle"
 nmap -F -T4 --min-rate 10 192.168.0.142 -oX - | xq '.nmaprun.runstats.hosts."@up"'
 for file in *.dff; do dff2dsf "$file" "${file%.*}.dsf"; done
 sudo mount -t cifs -o user=admin,uid=$(id -u),gid=$(id -g) '//192.168.0.196/Media' /home/$(id -un)/mount/nasmedia
-fc-cache -fv
