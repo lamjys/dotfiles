@@ -51,6 +51,14 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground = 'p:white'
 
   [[blocks.segments]]
+    type = 'python'
+    style = 'powerline'
+    powerline_symbol = ''
+    template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} '
+    background = '#906cff'
+    foreground = '#100e23'
+
+  [[blocks.segments]]
     type = 'status'
     style = 'diamond'
     background_templates = ['{{ if gt .Code 0 }}p:red{{ end }}']
@@ -98,7 +106,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     [blocks.segments.properties]
       display_mode = 'files'
       fetch_version = false
-      fetch_virtual_env = false
+      fetch_virtual_env = true
    
   [[blocks.segments]]
     type = "os"
