@@ -45,3 +45,7 @@ Host hetzner
 Host tencent
     HostName 43.133.45.115
     User lighthouse
+
+Host gcp
+    HostName 34.23.152.110
+    User lamjys
