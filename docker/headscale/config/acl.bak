@@ -1,0 +1,20 @@
+{
+  "grants": [
+    {"src": ["*"], "dst": ["*"], "ip": ["*"]}
+  ],
+  "groups": {"group:me": ["lamjys@"]},
+  "tagOwners": {
+    "tag:server": ["group:me"]
+  },
+  "acls": [
+    {"action": "accept", "src": ["group:me"], "proto": "tcp", "dst": ["tag:server:22"]},
+  ],
+  "ssh": [
+    {
+      "action": "accept",
+      "src": ["group:me"],
+      "dst": ["tag:server"],
+      "users": ["root", "nonroot", "nana", "lamjys@", "nana@"]
+    }
+  ],
+}
