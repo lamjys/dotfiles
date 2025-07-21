@@ -39,6 +39,7 @@ return packer.startup(function()
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+    --[[
     use({
         'MeanderingProgrammer/markdown.nvim',
         as = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
@@ -50,4 +51,27 @@ return packer.startup(function()
             require('render-markdown').setup({})
         end,
     })
+    ]]--
+    use {
+        "nvim-neorg/neorg",
+        rocks = { "lua-utils.nvim", "nvim-nio", "nui.nvim", "plenary.nvim", "pathlib.nvim" },
+        tag = "*", -- Pin Neorg to the latest stable release
+        config = function()
+        require("neorg").setup()
+        end,
+    }
+    use {
+            "OXY2DEV/markview.nvim",
+            lazy = false,      -- Recommended
+            -- ft = "markdown" -- If you decide to lazy-load anyway
+            dependencies = {
+                "nvim-treesitter/nvim-treesitter",
+                "nvim-tree/nvim-web-devicons"
+            }
+    }
+    local presets = require("markview.presets").headings;
+    require("markview").setup({
+        headings = presets.glow;
+    });
+    require("markview.extras.headings").setup();
 end)
