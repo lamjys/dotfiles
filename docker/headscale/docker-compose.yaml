@@ -1,0 +1,13 @@
+services:
+  headscale:
+    image: headscale/headscale:latest
+    container_name: headscale
+    ports:
+      - 27680:8080
+      - 27690:9090
+    volumes:
+      - ./config:/etc/headscale
+      - ./lib:/var/lib/headscale
+      - ./run:/var/run/headscale
+    command: serve
+    restart: unless-stopped

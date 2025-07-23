@@ -13,12 +13,15 @@ journals:
   default: /home/nana/.local/share/jrnl/journal.txt
   food:
     display_format: markdown
-    editor: code -rw
+    # editor: code -rw
     journal: /home/nana/.local/share/jrnl/food.txt
   movie:
     display_format: markdown
     editor: code -rw
     journal: /home/nana/.local/share/jrnl/movie.txt
+  work:
+    display_format: markdown
+    journal: /home/nana/.local/share/jrnl/work.txt
 linewrap: 79
 tagsymbols: '#@'
 template: false
