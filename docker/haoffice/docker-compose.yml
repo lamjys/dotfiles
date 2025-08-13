@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  homeassistant:
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    container_name: homeassistant
+    network_mode: host
+    environment:
+      - TZ=Asia/Hong_Kong
+    volumes:
+      - ./config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    privileged: true
+    restart: unless-stopped
+  ewelink_smart_home:
+    image: ewelink_smart_home
+    container_name: ewelink_smart_home
+    privileged: true
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - HA_URL=http://localhost:8123
+      - SUPERVISOR_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxN2VhY2UxZGQxZDM0YzcyYTA1MDQ0OWU1NTE2MmQzMCIsImlhdCI6MTc1NDkyMDE5OSwiZXhwIjoyMDcwMjgwMTk5fQ.BZavZdmGmAlHKyMbrl-AEMZ1WU3jf2NvqSTwOAUxM7M
+    volumes:
+      - ./volume:/data
