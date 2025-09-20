@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   homeassistant:
     image: "ghcr.io/home-assistant/home-assistant:stable"
@@ -23,3 +22,16 @@ services:
       - SUPERVISOR_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxN2VhY2UxZGQxZDM0YzcyYTA1MDQ0OWU1NTE2MmQzMCIsImlhdCI6MTc1NDkyMDE5OSwiZXhwIjoyMDcwMjgwMTk5fQ.BZavZdmGmAlHKyMbrl-AEMZ1WU3jf2NvqSTwOAUxM7M
     volumes:
       - ./volume:/data
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    environment:
+      - TZ=Asia/Hong_Kong
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - "./mosquitto/config:/mosquitto/config"
+      - "./mosquitto/data:/mosquitto/data"
+      - "./mosquitto/log:/mosquitto/log"
+    restart: unless-stopped
