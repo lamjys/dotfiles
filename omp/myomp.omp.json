@@ -6,72 +6,72 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "session",
-          "style": "plain",
-          "foreground": "#7E46B6",
           "properties": {
             "prefix": "",
             "template": "{{ .UserName }}"
-          }
-        },
-        {
-          "type": "os",
-          "style": "powerline",
-          "foreground": "#DD4814",
-          "properties": {
-            "prefix": "",
-            "postfix": " "
-          }
-        },
-        {
+          },
+          "foreground": "#7E46B6",
           "type": "session",
-          "style": "plain",
-          "foreground": "#4169E1",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "postfix": " ",
+            "prefix": ""
+          },
+          "foreground": "#DD4814",
+          "type": "os",
+          "style": "powerline"
+        },
+        {
           "properties": {
             "prefix": "",
             "template": "{{ .ComputerName }}"
-          }
+          },
+          "foreground": "#4169E1",
+          "type": "session",
+          "style": "plain"
         },
         {
-          "type": "path",
-          "style": "plain",
+          "properties": {
+            "prefix": "",
+            "style": "full"
+          },
           "foreground": "#87FF00",
-          "properties": {
-            "style": "full",
-            "prefix": ""
-          }
+          "type": "path",
+          "style": "plain"
         },
         {
-          "type": "git",
-          "style": "plain",
-          "foreground": "#5FD7FF",
           "properties": {
-            "template": "{{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }}<#87FF00> ● {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#D75F00> ● {{ .Working.String }}</>{{ end }}",
-            "fetch_status": true,
-            "display_status": true,
             "display_stash_count": true,
-            "display_upstream_icon": true
-          }
+            "display_status": true,
+            "display_upstream_icon": true,
+            "fetch_status": true,
+            "template": "{{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }}<#87FF00> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#D75F00> \u25cf {{ .Working.String }}</>{{ end }}"
+          },
+          "foreground": "#5FD7FF",
+          "type": "git",
+          "style": "plain"
         },
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#FFFFFF",
           "properties": {
-            "text": "\u26BD",
-            "prefix": ""
-          }
+            "prefix": "",
+            "text": "⚽"
+          },
+          "foreground": "#FFFFFF",
+          "type": "text",
+          "style": "plain"
         },
         {
-          "type": "python",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "template": " \ue235 {{ .Full }} ",
           "foreground": "#100e23",
+          "powerline_symbol": "\ue0b0",
           "background": "#906cff",
-          "template": " \uE235 {{ .Full }} "
+          "type": "python",
+          "style": "powerline"
         }
       ]
     }
   ],
-  "final_space": false
+  "version": 3
 }
