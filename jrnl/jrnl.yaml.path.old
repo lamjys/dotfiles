@@ -10,19 +10,20 @@ encrypt: false
 highlight: true
 indent_character: '|'
 journals:
-  default: ~/appdata/jrnl/journal.txt
+  default: ~/.local/share/jrnl/journal.txt
   food:
     display_format: markdown
-    journal: ~/appdata/jrnl/food.txt
+    # editor: code -rw
+    journal: ~/.local/share/jrnl/food.txt
   movie:
     display_format: markdown
     editor: code -rw
-    journal: ~/appdata/jrnl/movie.txt
+    journal: ~/.local/share/jrnl/movie.txt
   work:
     display_format: markdown
-    journal: ~/appdata/jrnl/work.txt
+    journal: ~/.local/share/jrnl/work.txt
 linewrap: 79
 tagsymbols: '#@'
 template: false
 timeformat: '%Y-%m-%d %H:%M'
-version: v4.2.1
+version: v4.1
