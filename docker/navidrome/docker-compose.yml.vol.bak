@@ -14,4 +14,4 @@ services:
       ND_SPOTIFY_SECRET: 480a808b2a724b119d07625f52a5c9e7
     volumes:
       - "./data:/data"
-      - "/home/nana/Music:/music:ro"
+      - "/var/lib/mpd/music/nasmusic:/music:ro"
