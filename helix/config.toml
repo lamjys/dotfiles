@@ -1,2 +1,5 @@
+theme = "gruvbox-material"
 [keys.normal]
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+[editor]
+true-color = true
