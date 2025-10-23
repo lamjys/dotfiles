@@ -12,4 +12,4 @@ services:
     ports:
       - "8090:8090"
     volumes:
-      - ~/appdata/glass-keep/.glass-keep:/app/data   # <— change this to your actual home path username
+      - ~/appdata/glass-keep/data:/app/data   # <— change this to your actual home path username
