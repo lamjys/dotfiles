@@ -30,3 +30,5 @@ alias ze='zellij'
 alias eza='eza -l --group-directories-first --icons=always --color-scale=all --color-scale-mode=gradient --time-style=long-iso'
 alias ls='eza'
 
+# nvim
+alias nv='cd ~/appdata/mdnotes/ && nvim .'
