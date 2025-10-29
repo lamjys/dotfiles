@@ -36,3 +36,7 @@ alias nv='cd ~/appdata/mdnotes/ && nvim .'
 # transmission-daemon
 alias trm='transmission-remote'
 alias tda='transmission-daemon'
+
+# age
+alias ageenc='age --armor -r $(cat ~/.config/sops/age/keys.txt | grep -oP "public key: \K(.*)")'
+alias agedec='age -d -i ~/.config/sops/age/keys.txt'
