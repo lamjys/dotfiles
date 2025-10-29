@@ -35,6 +35,7 @@ alias nv='cd ~/appdata/mdnotes/ && nvim .'
 
 # transmission-daemon
 alias trm='transmission-remote'
+alias trml='transmission-remote -l'
 alias tda='transmission-daemon'
 
 # age
