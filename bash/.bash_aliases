@@ -32,3 +32,7 @@ alias ls='eza'
 
 # nvim
 alias nv='cd ~/appdata/mdnotes/ && nvim .'
+
+# transmission-daemon
+alias trm='transmission-remote'
+alias tda='transmission-daemon'
