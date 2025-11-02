@@ -1,0 +1,76 @@
+/*****************************************************
+ * Magic Mirror                                      *
+ * Custom CSS                                        *
+ *                                                   *
+ * By Michael Teeuw http://michaelteeuw.nl           *
+ * MIT Licensed.                                     *
+ *                                                   *
+ * Add any custom CSS below.                         *
+ * Changes to this files will be ignored by GIT. *
+ *****************************************************/
+
+body {
+	text-shadow: 1px 1px grey;
+}
+
+.MMM-json-feed .dimmed {
+	color: #fff;
+}
+
+.newsfeed .light {
+	color: #fff;
+}
+
+.xsmall {
+	font-size: 10px;
+	line-height: 15px;
+}
+
+.small {
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.medium {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.calendar#module_1_calendar {
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 4px;
+}
+
+.calendar#module_1_calendar .normal,
+.calendar#module_1_calendar .bright {
+	color: #000;
+}
+
+#AVSTOCK * {
+	font-size: 12px;
+}
+
+#AVSTOCK .ticker-wrap {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.newsfeed {
+	 /* 
+	 * reduce max viewwidt to 40 and shift x by 20
+	 *
+	-moz-transform: translateX(20%);
+	-o-transform: translateX(20%);
+	-webkit-transform: translateX(20%);
+	-ms-transform: translateX(20%);
+	transform: translateX(20%);
+    */
+	max-width: 60vw;
+}
+
+/* MMM-FlipClock */ 
+.tick-flip, tick-text-inline {
+    font-size: 3em;
+}
+.MMM-BackgroundSlideshow .info {
+    font-size: 14px;
+}
