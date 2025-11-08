@@ -7,11 +7,11 @@ Host myhi
     User myvncuser
 
 Host lamha
-    HostName 192.168.0.100
+    HostName 192.168.0.180
     User lamjys
 
 Host nanaha
-    HostName 192.168.0.100
+    HostName 192.168.0.180
     User nana
 
 Host ocia
