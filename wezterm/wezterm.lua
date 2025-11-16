@@ -37,7 +37,10 @@ config.window_padding = {
 
 -- Font settings
 config.font_size = 12
-config.font = wezterm.font("MesloLGLDZ Nerd Font")
+config.font = wezterm.font_with_fallback({
+	"MesloLGLDZ Nerd Font",
+	"wqy-zenhei",
+})
 
 -- and finally, return the configuration to wezterm
 return config
