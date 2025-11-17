@@ -27,7 +27,7 @@ alias lg='lazygit'
 alias ze='zellij'
 
 # eza
-alias eza='eza -l --group-directories-first --icons=always --color-scale=all --color-scale-mode=gradient --time-style=long-iso'
+alias eza='eza -l --group-directories-first --icons=always --color-scale=all --color-scale-mode=gradient --time-style=long-iso --git'
 alias ls='eza'
 
 # nvim
