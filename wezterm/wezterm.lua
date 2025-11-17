@@ -20,12 +20,12 @@ config.color_scheme = "nord"
 config.window_background_image = constants.bg_image
 -- config.window_background_image = "/home/nana/Pictures/term-bg-01.jpg"
 config.window_background_image_hsb = {
-	brightness = 0.2,
-	saturation = 0.6,
+	brightness = 0.4,
+	saturation = 0.8,
 }
 
 -- Appearance
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
