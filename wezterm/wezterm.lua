@@ -20,7 +20,7 @@ config.color_scheme = "nord"
 config.window_background_image = constants.bg_image
 -- config.window_background_image = "/home/nana/Pictures/term-bg-01.jpg"
 config.window_background_image_hsb = {
-	brightness = 0.4,
+	brightness = 0.1,
 	saturation = 0.8,
 }
 
