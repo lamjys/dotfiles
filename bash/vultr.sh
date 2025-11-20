@@ -23,4 +23,15 @@ VULTR_API_KEY=$(age -d -i ${PATH_AGE_KEY} ${PATH_VULTR_API_KEY})
 # echo "Variable: VULTR_API_KEY = $VULTR_API_KEY"
 # echo "Variable: VULTR_END_POINT = $VULTR_END_POINT"
 
-curl "${VULTR_END_POINT}" -X GET -H "Authorization: Bearer ${VULTR_API_KEY}"
+# curl "${VULTR_END_POINT}" -X GET -H "Authorization: Bearer ${VULTR_API_KEY}"
+curl "${VULTR_END_POINT}" \
+  -X POST \
+  -H "Authorization: Bearer ${VULTR_API_KEY}" \
+  -H "Content-Type: application/json" \
+  --data '{
+    "name": "mini",
+    "type": "CNAME",
+    "data": "hiyama.cloud",
+    "ttl": 300,
+    "priority" : 0
+  }'
