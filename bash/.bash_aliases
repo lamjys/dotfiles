@@ -44,3 +44,6 @@ alias agedec='age -d -i ~/.config/sops/age/keys.txt'
 
 # zathura
 alias zat=zathura
+
+# homeassistant command script
+alias ha-light='bash -c ~/appdata/dotfiles/bash/ha-light.sh'
