@@ -40,17 +40,34 @@ bind -x '"\C-x\C-r": _readline_from_csv'
 myov() {
     # 檢查是否有輸入參數（伺服器網址）
     if [ -z "$1" ]; then
-        echo "使用方法: myov <server-address>"
-        echo "範例: myov za-jnb"
+        echo "使用方法: myov <server-area> [tcp|udp]"
+        echo "範例: myov za-jnb tcp"
+        return 1
+    fi
+
+    # 處理第二參數：預設為 tcp，僅接受 udp 或 tcp
+    local PROTOCOL="${2:-tcp}"
+    local SERVER_CONFIG="/etc/openvpn/${1}.prod.surfshark.com_${PROTOCOL}.ovpn"
+
+    # 檢查設定檔是否存在
+    if [ ! -f "$SERVER_CONFIG" ]; then
+        echo "錯誤: 找不到設定檔 $SERVER_CONFIG"
         return 1
     fi
 
     # 定義變數以簡化後續指令
-    local KEY_FILE="/home/nana/.config/sops/age/keys.txt"
-    local CRED_FILE="/home/nana/Nextcloud/Keys/surfshark/surfshark_credential.txt.age"
-    local SERVER_CONFIG="${1}.prod.surfshark.com_udp.ovpn"
+    local KEY_FILE="/home/$USER/.config/sops/age/keys.txt"
+    local CRED_FILE="/home/$USER/Nextcloud/Keys/surfshark/surfshark_credential.txt.age"
+
+    # 提取憑據（僅解密一次以提高安全性與速度）
+    local CREDS
+    CREDS=$(age -d -i "$KEY_FILE" "$CRED_FILE" 2>/dev/null)
+    local USERNAME=$(echo "$CREDS" | sed -n '2p')
+    local PASSWORD=$(echo "$CREDS" | sed -n '10p')
+
 
     # 執行指令
-    sudo bash -c "openvpn --config $SERVER_CONFIG --auth-user-pass <(echo -e \"\$(age -d -i $KEY_FILE $CRED_FILE | head -n 2 | tail -n 1)\n$(age -d -i $KEY_FILE $CRED_FILE | head -n 10 | tail -n 1)\")"
+    sudo bash -c "openvpn --config $SERVER_CONFIG --auth-user-pass <(printf "%s\n%s\n" "$USERNAME" "$PASSWORD")"
+    # sudo bash -c "openvpn --config $SERVER_CONFIG --auth-user-pass <(echo -e \"\$(age -d -i $KEY_FILE $CRED_FILE | head -n 2 | tail -n 1)\n$(age -d -i $KEY_FILE $CRED_FILE | head -n 10 | tail -n 1)\")"
 }
 
