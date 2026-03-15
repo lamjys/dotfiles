@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=toggle-tasmota
+Exec=/home/nana/appdata/dotfiles/bash/toggle-tasmota.sh
+Icon=/home/nana/appdata/assets/icons/icons8-switch-96.png
+Terminal=true
+Comment=Script to toggle tasmota with homeassistant api
+Categories=Utility;
+
