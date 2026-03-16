@@ -47,3 +47,6 @@ alias zat=zathura
 
 # homeassistant command script
 alias ha-light='bash -c ~/appdata/dotfiles/bash/ha-light.sh'
+
+# qmv
+alias qmv="qmv -e nvim -v -f sc -o separate,indicator1='f|',indicator2='t|'"
