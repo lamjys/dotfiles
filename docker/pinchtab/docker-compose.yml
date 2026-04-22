@@ -1,0 +1,13 @@
+services:
+    pinchtab:
+        user: "${UID}:${GID}" 
+        container_name: pinchtab
+        ports:
+            - 9867:9867
+        environment:
+            - PINCHTAB_CONFIG=/config/config.json
+        volumes:
+            - ${PWD}/docker-data:/data
+            - ${PWD}/docker-data/config.json:/config/config.json:ro
+        shm_size: 2g
+        image: pinchtab/pinchtab
