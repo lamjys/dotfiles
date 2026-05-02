@@ -29,7 +29,7 @@ curl "${VULTR_END_POINT}" \
   -H "Authorization: Bearer ${VULTR_API_KEY}" \
   -H "Content-Type: application/json" \
   --data '{
-    "name": "apie",
+    "name": "iosk",
     "type": "CNAME",
     "data": "hiyama.cloud",
     "ttl": 300,

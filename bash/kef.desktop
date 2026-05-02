@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=toggle-kef
+Exec=/home/nana/appdata/dotfiles/bash/toggle-kef.sh
+Icon=/home/nana/appdata/assets/icons/icons8-speaker-94.png
+Terminal=true
+Comment=Script to toggle KEF_LSX Speaker with homeassistant api
+Categories=Utility;
+
