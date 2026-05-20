@@ -1,0 +1,12 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"altInstanceId": "",
+	"sync.target": 5,
+	"sync.5.path": "https://next.hiyama.cloud/remote.php/dav/files/lamjys/Joplin",
+	"sync.5.username": "lamjys",
+	"locale": "en_US",
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"editor": "nvim",
+	"api.token": "3057393ab9d17490b3d31eaa8af24153d1bb2c145ccc65b50ff5af29de84f8c18ae55539c588411576e5f141594dd325c2e02702f1fd0c12441dd2d5d2f3b163"
+}
