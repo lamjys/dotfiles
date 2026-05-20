@@ -1,0 +1,41 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"altInstanceId": "",
+	"sync.target": 5,
+	"sync.5.path": "https://next.hiyama.cloud/remote.php/dav/files/lamjys/Joplin",
+	"sync.5.username": "lamjys",
+	"locale": "en_GB",
+	"ocr.enabled": false,
+	"themeAutoDetect": false,
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"width": 250,
+				"visible": true
+			},
+			{
+				"key": "noteList",
+				"width": 250,
+				"visible": true
+			},
+			{
+				"key": "editor",
+				"visible": true
+			}
+		],
+		"visible": true
+	},
+	"clipperServer.autoStart": true,
+	"noteVisiblePanes": [
+		"editor",
+		"viewer"
+	],
+	"api.token": "8fa9e04c435103353f5b4952403badbcf730c0ae98b543c8c2d9761e26f9c82f9b342df730ead04bba2e43559f311dd697330d54695468a3600015da8c8c63f1",
+	"spellChecker.languages": [
+		"en-US"
+	]
+}
