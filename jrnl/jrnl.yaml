@@ -16,7 +16,7 @@ journals:
     journal: ~/appdata/jrnl/food.txt
   movie:
     display_format: markdown
-    editor: code -rw
+    editor: leaf
     journal: ~/appdata/jrnl/movie.txt
   work:
     display_format: markdown
