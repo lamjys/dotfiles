@@ -1,0 +1,20 @@
+server:
+  assets-path: /app/assets
+
+auth:
+  secret-key: nUlr+qV/xhlKa2d11eI71m+EPoygMZguAh9kObw54sWfm51aItNyOiTbpPy8IPfnxFsakder3pgyWz5+VXE00g== # this must be set to a random value generated using the secret:make CLI command
+  users:
+    admin:
+      password-hash: $2a$10$iKCdKCqfFwyVNuN7kJEBmu4h8gRIhxe6U7fMeWhDXNyMYpPsZqtsu
+    lamjys:
+      password-hash: $2a$10$iKCdKCqfFwyVNuN7kJEBmu4h8gRIhxe6U7fMeWhDXNyMYpPsZqtsu
+
+theme:
+  # Note: assets are cached by the browser, changes to the CSS file
+  # will not be reflected until the browser cache is cleared (Ctrl+F5)
+  custom-css-file: /assets/user.css
+
+pages:
+  # It's not necessary to create a new file for each page and include it, you can simply
+  # put its contents here, though multiple pages are easier to manage when separated
+  - $include: home.yml
