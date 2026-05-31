@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=2026 Calendar
+Comment=Open PNG image
+Exec=xdg-open /home/nana/Pictures/2026-Calendar.png
+Icon=/home/nana/appdata/assets/icons/icons8-calendar-96.png
+Terminal=false
+Categories=Graphics;Viewer;
+
