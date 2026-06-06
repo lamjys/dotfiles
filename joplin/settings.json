@@ -1,9 +1,11 @@
 {
 	"$schema": "https://joplinapp.org/schema/settings.json",
 	"altInstanceId": "",
-	"sync.target": 5,
+	"sync.target": 9,
 	"sync.5.path": "https://next.hiyama.cloud/remote.php/dav/files/lamjys/Joplin",
 	"sync.5.username": "lamjys",
+	"sync.9.path": "https://joplin.hiyama.cloud",
+	"sync.9.username": "lamjys@gmail.com",
 	"locale": "en_US",
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
